@@ -1,9 +1,19 @@
 <html>
   <head>
-    <title> {{title}} - 'my app' </title> 
+    {% if title %}
+    <title> {{title}} - 'my app' </title>
+    {% else %}
+    <title> 'my app' </title>
   </head>
 
   <body>
     <h1> Hello, {{user.usename}}! </h1>
+    {% for post in posts %}
+    <div>
+        <p>
+        {{% post.author.usename%}} says : <b> {{ post.body}} </b>
+        </p>
+    </div>
+    {% endfor %}
   </body>
 </html>
