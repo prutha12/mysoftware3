@@ -1,0 +1,24 @@
+<html>
+    <head>
+        {% if title %}
+        <title>
+            {{title}} - web ap pag
+        </title>
+        {% else %}
+        <title>
+             web ap pag
+        </title>
+        {% endif %}
+    </head>
+    
+    <body>
+        <div>
+            Web App: <a> href="/index"</a>
+        </div>
+        <hr>
+        
+        {% block content %}
+        {% endblock %}
+
+    </body>
+</html>
